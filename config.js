@@ -1,12 +1,12 @@
 module.exports.READ_MAIL_CONFIG = {
   imap: {
-    user: process.env.EMAIL,
-    password: process.env.PASSWORD,
-    host: 'imap.gmail.com',
+    user: "historico@bapkasorvetes.com.br",
+    password: "HistoricoBapka2023!",
+    host: 'mail.bapkasorvetes.com.br',
     port: 993,
     authTimeout: 10000,
     tls: true,
-    tlsOptions: { rejectUnauthorized: false },
+    tlsOptions: { rejectUnauthorized: false,},
   },
 };
 
