@@ -1,7 +1,7 @@
 module.exports.READ_MAIL_CONFIG = {
   imap: {
-    user: "historico@bapkasorvetes.com.br",
-    password: "HistoricoBapka2023!",
+    user: "sistema@bapkasorvetes.com.br",
+    password: "SistemaBapka2023!",
     host: 'mail.bapkasorvetes.com.br',
     port: 993,
     authTimeout: 10000,
