@@ -11,7 +11,7 @@ const readMail = async () => {
     const searchCriteria = ['UNSEEN'];
     const fetchOptions = {
       bodies: ['HEADER', 'TEXT'],
-      markSeen: false,
+      markSeen: true,
     };
     const results = await connection.search(searchCriteria, fetchOptions);
     results.forEach((res) => {

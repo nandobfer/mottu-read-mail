@@ -19,7 +19,7 @@ const getAddress = (body) => {
         cidade: data[5],
         estado: data[6],
         cep: data[7].replace(`-`, ``),
-        telefone: data[8],
+        telefone: getBetween(data[8], '[tel:', ']'),
         email: data[9]
     }
 
