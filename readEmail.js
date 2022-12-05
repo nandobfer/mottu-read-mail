@@ -27,8 +27,6 @@ const readMail = async () => {
 
       mail.subject = subject
       mail.body = emailText
-
-      console.log(subject, emailText)
     });
     
     connection.end();

@@ -1,5 +1,4 @@
 const processEmail = (mail) => {
-    console.log(mail)
     const loja = getLoja(mail.subject)
     const address = getAddress(mail.body)
 
