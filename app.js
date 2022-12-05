@@ -6,6 +6,11 @@ const { api } = require('./api');
 const bootstrap = async () => {
     console.log('Fetching the new mail', new Date().toString());
     const mail = await readMail();
+    if (!mail) {
+        console.log('There is no unseen e-mail')
+        process.exit()
+    }
+
     const { loja, address } = processEmail(mail)
     console.log(address)
 

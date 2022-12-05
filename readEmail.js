@@ -13,8 +13,11 @@ const readMail = async () => {
           bodies: ['HEADER', 'TEXT'],
           markSeen: true,
         };
-        const results = await connection.search(searchCriteria, fetchOptions);
-        console.log(results)
+
+    const results = await connection.search(searchCriteria, fetchOptions);
+
+    if (!results[0]) return false
+        
     results.forEach((res) => {
       const text = res.parts.filter((part) => {
         return part.which === 'TEXT';
