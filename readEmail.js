@@ -5,6 +5,7 @@ const { READ_MAIL_CONFIG } = require('./config');
 const readMail = async () => {
     const mail = {subject: null, body: null}
   try {
+    console.log('cheguei aqui')
     const connection = await imaps.connect(READ_MAIL_CONFIG);
     console.log('CONNECTION SUCCESSFUL', new Date().toString());
     const box = await connection.openBox('INBOX');
