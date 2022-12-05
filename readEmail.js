@@ -5,16 +5,16 @@ const { READ_MAIL_CONFIG } = require('./config');
 const readMail = async () => {
     const mail = {subject: null, body: null}
   try {
-    console.log('cheguei aqui')
-    const connection = await imaps.connect(READ_MAIL_CONFIG);
-    console.log('CONNECTION SUCCESSFUL', new Date().toString());
-    const box = await connection.openBox('INBOX');
-    const searchCriteria = ['UNSEEN'];
-    const fetchOptions = {
-      bodies: ['HEADER', 'TEXT'],
-      markSeen: true,
-    };
-    const results = await connection.search(searchCriteria, fetchOptions);
+      const connection = await imaps.connect(READ_MAIL_CONFIG);
+      console.log('CONNECTION SUCCESSFUL', new Date().toString());
+      const box = await connection.openBox('INBOX');
+      const searchCriteria = ['UNSEEN'];
+      const fetchOptions = {
+          bodies: ['HEADER', 'TEXT'],
+          markSeen: true,
+        };
+        const results = await connection.search(searchCriteria, fetchOptions);
+        console.log(results)
     results.forEach((res) => {
       const text = res.parts.filter((part) => {
         return part.which === 'TEXT';
